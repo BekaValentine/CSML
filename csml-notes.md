@@ -81,7 +81,7 @@ spec ---+---> db schema generator
 - Need some way to define inferences rules or step relations, depending on which is more necessary. Probably inference rules, because some step relations have conditional stepping.
   - Aren't inference rules just dependent datatypes? Well, not quite, because the proofs of them can't be referenced within the language itself, only declared.
   - Syntax for this should use the abstract syntax of the language, not the concrete syntax.
-- Should do some amount of checking of the specs themselves: are all the variables/types in scope?
+- Should do some amount of checking of the specs themselves: are all the variables/types in scope? AST vars are a subset of CST vars?
 
 #### Example Program
 
