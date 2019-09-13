@@ -1,6 +1,6 @@
-# Notes on Operational Semantics Representations
+# Notes on CSML
 
-## Requirements
+## Requirements for OpSem component
 
 We need to be able to indicate at least the following:
 
@@ -55,7 +55,7 @@ spec ---+---> db schema generator
 
 ```
 
-### Sketch of a spec
+### Notes on CSML
 
 - Simple algebraic datatypes with concrete and abstract syntaxes
   - Use standard CSML notation for this part
@@ -81,6 +81,7 @@ spec ---+---> db schema generator
 - Need some way to define inferences rules or step relations, depending on which is more necessary. Probably inference rules, because some step relations have conditional stepping.
   - Aren't inference rules just dependent datatypes? Well, not quite, because the proofs of them can't be referenced within the language itself, only declared.
   - Syntax for this should use the abstract syntax of the language, not the concrete syntax.
+- Should do some amount of checking of the specs themselves: are all the variables/types in scope?
 
 #### Example Program
 
