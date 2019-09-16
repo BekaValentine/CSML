@@ -77,7 +77,7 @@ spec ---+---> db schema generator
     - probably should also include notation for things like addition (`G,x`), removal (either `G\\x` or `G-x`), and updates on maps (`G[x=M]`)
       - These would be type-based sugar. E.g. `G,x` for lists means `G2` plus the constraint `G = [elE\*] and G2 = [elE*,x]`, while for maps `G[x=M]` means `G2` plus the constraint `G = [[elG*, x = _]] and G2 = [[elG*, x = M]]`.
 - No need for builtin support for stacks and environments, just use the existing builtin types. We can conventionally just expect that stack and environment types will be declared as such.
-  - To use a 
+  - To use a type as a stack or environment or whatever, the external user of the program would constrain its types appropriately. E.g., if we expect stacks to be stacks of `Value`s, then the external user of the spec will only accept as valid an appropriately named type that is defined to be `Value`.
 - Need some way to define inferences rules or step relations, depending on which is more necessary. Probably inference rules, because some step relations have conditional stepping.
   - Aren't inference rules just dependent datatypes? Well, not quite, because the proofs of them can't be referenced within the language itself, only declared.
   - Syntax for this should use the abstract syntax of the language, not the concrete syntax.
